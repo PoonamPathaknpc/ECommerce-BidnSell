@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+  "-//Hibernate/Hibernate Configuration DTD//EN"
+  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>    
+   <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+   <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ECOMMERCE</property>
+   <property name="hibernate.connection.username">root</property>
+   <property name="hibernate.connection.password">A*painter123</property>
+   <property name="hibernate.hbm2ddl.auto">update</property>
+   <property name="hibernate.enable_lazy_load_no_trans">true</property>
+   <property name="show_sql">true</property>  
+   <property name="hibernate.current_session_context_class">thread</property>
+      <mapping class="com.bean.USER_IDBean"/>
+      <mapping class="com.bean.USER_INFOBean"/>
+      <mapping class="com.bean.Sell_ItemsBean"/>
+      <mapping class="com.bean.Cart_Bean"/>
+      <mapping class="com.bean.Bid_ItemsBean"/>
+      <mapping class="com.bean.NonBidItemsBean"/>
+      <mapping class="com.bean.Orders_Bean"/>
+      <mapping class="com.bean.Image_Bean"/>
+
+</session-factory>        
+</hibernate-configuration>
+
